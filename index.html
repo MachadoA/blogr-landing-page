@@ -7,76 +7,80 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   
-  <title>Frontend Mentor | [Blogr]</title>
+  <title>Frontend Mentor | Blogr</title>
   <style>
     .attribution { font-size: 11px; text-align: center; padding-top: 30px; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-  <div class="container">
-    <section class="main">
-      <header>
-        <a class="link-main" href="index.html">Blogr</a>
-        <img id="hamburger" src="images/icon-hamburger.svg" alt="hamburger menu">
-        <img id="closed-menu" src="images/icon-close.svg" alt="closed menu">
-        <nav>
-          <ul class="menu">
-            <li>
-              <a href="#">
-                Product 
-                <img class="icon-arrow-dark" src="images/icon-arrow-dark.svg" alt="icon arrow">
-                <img class="icon-arrow-light" src="images/icon-arrow-light.svg" alt="icon arrow">
-              </a>
-                <ul>
-                <li>Overview</li>
-                <li>Pricing</li>
-                <li>Marketplace</li>
-                <li>Features</li>
-                <li>Integrations</li>
-                </ul>
-            </li>
-            <li>
-              <a href="#">
-              Company 
-              <img class="icon-arrow-light" src="images/icon-arrow-light.svg" alt="icon arrow">
+  <main>
+    <header>
+      <a class="link-main" href="index.html">
+          <img src="images/logo.svg" alt="Logo">
+      </a>
+      <img id="hamburger" src="images/icon-hamburger.svg" alt="hamburger menu">
+      <img id="closed-menu" src="images/icon-close.svg" alt="closed menu">
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="#" class="menu-link">
+              Product 
               <img class="icon-arrow-dark" src="images/icon-arrow-dark.svg" alt="icon arrow">
-              </a>
-              <ul>
-                <li>About</li>
-                <li>Team</li>
-                <li>Blog</li>
-                <li>Careers</li>
+              <img class="icon-arrow-light" src="images/icon-arrow-light.svg" alt="icon arrow">
+            </a>
+              <ul class="menu-dropdown">
+              <li>Overview</li>
+              <li>Pricing</li>
+              <li>Marketplace</li>
+              <li>Features</li>
+              <li>Integrations</li>
               </ul>
-            </li>
-            <li>
-              <a href="">
-                Connect
-                <img class="icon-arrow-dark" src="images/icon-arrow-dark.svg" alt="icon arrow">
-                <img class="icon-arrow-light" src="images/icon-arrow-light.svg" alt="icon arrow">
-              </a>
-              <ul>
-                <li>Contact</li>
-                <li>Newsletter</li>
-                <li>LinkedIn</li>
-              </ul>
-            </li>
-          </ul>
-          <button>Login</button>
+          </li>
+          <li>
+            <a href="#" class="menu-link">
+            Company 
+            <img class="icon-arrow-light" src="images/icon-arrow-light.svg" alt="icon arrow">
+            <img class="icon-arrow-dark" src="images/icon-arrow-dark.svg" alt="icon arrow">
+            </a>
+            <ul class="menu-dropdown">
+              <li>About</li>
+              <li>Team</li>
+              <li>Blog</li>
+              <li>Careers</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-link">
+              Connect
+            <img class="icon-arrow-light" src="images/icon-arrow-light.svg" alt="icon arrow">
+            <img class="icon-arrow-dark" src="images/icon-arrow-dark.svg" alt="icon arrow">
+            </a>
+            <ul class="menu-dropdown">
+              <li>Contact</li>
+              <li>Newsletter</li>
+              <li>LinkedIn</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="btns-nav">
+          <button >Login</button>
           <button class="signup">Sign Up</button>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
     
-      <article class="introductory-text">
-        <h1>A modern publishing platform</h1>
-        <p>Grow your audience and build your online brand</p>
-        <article class="btn-option">
-          <button class="btn-white">Start for Free</button>
-          <button class="btn-learn">Learn More</button>
-        </article>
+    <article class="introductory-text">
+      <h1>A modern publishing platform</h1>
+      <p>Grow your audience and build your online brand</p>
+      <article class="btn-option">
+        <button class="btn-white">Start for Free</button>
+        <button class="btn-learn">Learn More</button>
       </article>
-</section>
-    
+    </article>
+  </main>
+  
+    <div class="container">
     <article class="second">
       <h2 id="title">Designed for the future</h2>
       <div class="grid-image">
@@ -114,9 +118,9 @@
         <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a freeze, but capable of producing even the most complicated sites.</p>
       </div>
     </article>
-
+  </div>
     <footer>
-      <a class="link-main" href="index.html">Blogr</a>
+      <a class="link-main" href="index.html"><img src="images/logo.svg" alt="logo"></a>
       <div class="footer-class">
         <article>
           <h3><a href="#">Product</a></h3>
@@ -149,7 +153,7 @@
       </div>
     </footer>
     
-  </div>
+  
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
