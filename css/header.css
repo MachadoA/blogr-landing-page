@@ -1,0 +1,188 @@
+:root{
+    --light-red-CTA-text: hsl(356, 100%, 66%);
+    --very-light-red-CTA-hover: hsl(355, 100%, 74%);
+    --very-dark-blue-headings: hsl(208, 49%, 24%);
+    --white-text: hsl(0, 0%, 100%);
+    --footer-text: hsl(240, 2%, 79%);
+    --body-copy: hsl(207, 13%, 34%);
+    --footer-background: hsl(240, 10%, 16%);
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Overpass', sans-serif;
+    font-size: 16px;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    background-color: inherit;
+    font-size: inherit;
+}
+
+a{color: inherit;}
+
+.main {
+    padding: 20px 10px;
+    background: url('../images/bg-pattern-intro-mobile.svg') center/200% 300% no-repeat, linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    max-width: 100vw;
+    height: 350px;
+    border-bottom-left-radius: 75px;
+    color: var(--white-text);
+    margin: auto;
+}
+
+header{
+    margin: auto;
+    max-width: 350px;
+    width: 100%;
+    padding: 30px 25px;
+    display: flex;
+    gap: 20px;
+}
+#hamburger.active{
+    display: none;
+}
+#hamburger{
+    display: block;
+}
+#closed-menu{
+    display: none;
+}
+#closed-menu.active{
+    display: block;
+}
+nav{
+    background-color: #fff;
+    border-radius: 8px;
+    color: var(--very-dark-blue-headings);
+    z-index: 100;
+    line-height: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    display: none;
+}
+nav button{
+    color: #fff;
+}
+.link-main{
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+} 
+.menu{
+    display: flex;
+    justify-content: flex-start;
+    width: 600px;
+    gap: 30px;
+    cursor: pointer;
+}
+.menu li > ul{
+    display: none;
+    background-color: #fff !important;
+    color: var(--very-dark-blue-headings);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+.menu li:hover > ul{
+    display: inline;
+}
+.icon-arrow-light{
+    display: none;
+}
+
+.introductory-text{
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+}
+.introductory-text h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 34px;
+}
+.introductory-text p{
+    padding: 10px 20px 20px;
+}
+
+.btn-option button{
+    font-size: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: var(--white-text);
+    border: 1px solid #fff;
+    width: 100px;
+    height: 30px;
+    border-radius: 22px;
+}
+.btn-option .btn-white{
+    background-color: #fff;
+    color: hsl(356, 100%, 66%);
+    margin-right: 15px;
+}
+.btn-white:hover{
+    background-color: rgb(255, 82, 93);
+    color: #fff;
+}
+.btn-learn:hover{
+    background-color: #fff;
+    color: hsl(356, 100%, 66%);
+}
+
+.signup{
+    width: 130px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    color: #fff;
+    outline: 1px solid var(--light-red-CTA-text);
+}
+
+
+@media (min-width: 950px){
+    header{
+        max-width: 900px;
+        padding: 30px 10px;
+        gap: 15px;
+        align-items: center;
+        }
+        nav{
+            align-items: center;
+            color: #fff;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            background-color: inherit;
+        }
+        #hamburger{
+            display: none;
+        }
+        .menu{
+            display: flex;
+            justify-content: flex-start;
+            width: 600px;
+            gap: 45px;
+        }
+        .icon-arrow-light{
+            display: inline;
+        }
+        .icon-arrow-dark{
+            display: none;
+        }
+        .introductory-text{
+            max-width: 950px;
+        }
+        .icon-arrow{
+            color: #fff;
+        }
+        .link-main{
+            font-size: 32px;
+        } 
+        .menu li > ul{
+            background-color: #fff !important;
+            color: var(--very-dark-blue-headings);
+        }
+}
