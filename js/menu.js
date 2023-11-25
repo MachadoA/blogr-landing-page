@@ -26,6 +26,14 @@ document.addEventListener('click', (event) => {
     }
 });
 
+function hideDropdown() {
+    menuLinks.forEach(link => link.classList.remove('active'));
+    dropdownLinks.forEach(dropdown => dropdown.classList.remove('active'));
+    iconDarks.forEach(icon => icon.classList.remove('active'));
+    iconLights.forEach(icon => icon.classList.remove('active'));
+    nav.style.height = '';
+    navMenu.style.height = ''; 
+}
 
 menuLinks.forEach((menuLink, index) => {
     menuLink.addEventListener('click', (event) => {
@@ -54,11 +62,4 @@ menuLinks.forEach((menuLink, index) => {
     });
 });
 
-function hideDropdown() {
-    menuLinks.forEach(link => link.classList.remove('active'));
-    dropdownLinks.forEach(dropdown => dropdown.classList.remove('active'));
-    iconDarks.forEach(icon => icon.classList.remove('active'));
-    iconLights.forEach(icon => icon.classList.remove('active'));
-    nav.style.height = '';
-    navMenu.style.height = ''; 
-}
+
