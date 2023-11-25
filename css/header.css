@@ -8,40 +8,24 @@
     --footer-background: hsl(240, 10%, 16%);
 }
 
-body{
-    font-family: 'Ubuntu', sans-serif;
-    font-family: 'Overpass', sans-serif;
-    font-size: 16px;
-}
-
-button{
-    cursor: pointer;
-    border: none;
-    font-family: inherit;
-    background-color: inherit;
-    font-size: inherit;
-}
-
-a{color: inherit;}
-
 main {
     padding: 20px 10px;
     background: url('../images/bg-pattern-intro-mobile.svg') 35% 50%/250% no-repeat, linear-gradient(135deg, hsl(13, 100%, 72%) 10%, hsl(353, 100%, 62%) 50%);
     max-width: 100vw;
-    height: 600px;
+    height: 500px;
     border-bottom-left-radius: 100px;
     color: var(--white-text);
     margin: auto;
 }
-
 header{
     margin: auto;
     max-width: 350px;
     width: 100%;
-    padding: 30px 25px;
+    padding: 20px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 #hamburger.active{
     display: none;
@@ -55,48 +39,110 @@ header{
 #closed-menu.active{
     display: block;
 }
-nav{
+.nav{
     background-color: #fff;
     border-radius: 8px;
     color: var(--very-dark-blue-headings);
     line-height: 2;
-    display: flex;
+    width: 300px;
+    height: 270px;
+    flex-direction: column;
+    padding-top: 20px;
     display: none;
+    position: absolute;
+    z-index: 100;
+    top: 80px;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-nav button{
-    color: #fff;
+.nav.active{
+    display: flex;
 }
-.link-main{
-    font-size: 20px;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 700;
-} 
 .menu{
     display: flex;
-    justify-content: flex-start;
-    width: 600px;
-    gap: 30px;
+    height: 140px;
+    gap: 10px;
     cursor: pointer;
-}
-.menu-dropdown{
-    display: none;
-    font-family: 'Ubuntu', sans-serif;
-    color: hsl(207, 13%, 34%);
-    margin-top: 8px;
-    border-radius: 8px;
-}
-.menu-dropdown li:hover{
-    font-weight: 600;
+    flex-direction: column;
+    align-items: center;
 }
 .menu li{
     position: relative;
 }
-
-.menu li > .menu-dropdown.active{
-    display: inline;
+.menu a:hover{
+    color: var(--footer-text);
+}
+.menu-link{
+    position: relative;
+}
+.menu-dropdown{
+    display: none;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 8px;
+    width: 250px;
+    padding: 10px 0;
+    background-color: #fdfdfd;
+    color: var(--body-copy)
+}
+.menu-dropdown li:hover{
+    font-weight: 600;
+}  
+.menu-dropdown.active{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--footer-text);
+    background-color: #f1f1f1;
+}
+.menu-dropdown.active + .menu a{
+    color: var(--footer-text);
 }
 .icon-arrow-light{
     display: none;
+}
+.icon-arrow-dark.active{
+    transform: rotate(180deg);
+}
+.menu a,
+.login{
+    transition: all 0.1s ease-in-out;
+}
+.menu a:hover,
+.login:hover{
+    border-bottom: 3px solid #fff;
+}
+.btns-nav{
+    border-top: 1px solid var(--very-dark-blue-headings);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px
+}
+.login{
+    margin-top: 15px;
+    color: var(--very-dark-blue-headings);
+}
+.btn-white:hover{
+    background-color: rgb(255, 82, 93);
+    color: #fff;
+}
+.btn-learn:hover{
+    background-color: #fff;
+    color: hsl(356, 100%, 66%);
+}
+.signup{
+    width: 130px;
+    height: 48px;
+    border-radius: 25px;
+    color: #fff;
+    background: #FF505C;
+    font-weight: 700;
+    outline: 1px solid var(--light-red-CTA-text);
+    border: transparent;
+    transition: all 100ms linear;
+}
+.signup:hover{
+    background-color: #FF7B86;
+    color: #fff;
 }
 
 .introductory-text{
@@ -112,7 +158,6 @@ nav button{
 .introductory-text p{
     padding: 10px 30px 20px;
 }
-
 .btn-option button{
     font-size: 10px;
     font-family: 'Ubuntu', sans-serif;
@@ -130,81 +175,81 @@ nav button{
     margin-right: 15px;
 }
 .btn-white:hover{
-    background-color: rgb(255, 82, 93);
-    color: #fff;
-}
-.btn-learn:hover{
-    background-color: #fff;
-    color: hsl(356, 100%, 66%);
-}
-
-.signup{
-    width: 130px;
-    height: 50px;
-    border-radius: 25px;
-    color: #FF505C;
-    background: #fff;
-    font-weight: 700;
-    outline: 1px solid var(--light-red-CTA-text);
-    border: transparent;
-    transition: all 100ms linear;
-}
-.signup:hover{
     background-color: #FF7B86;
     color: #fff;
 }
 
-
-@media (min-width: 950px){
+@media(min-width:950px){
     header{
-        max-width: 950px;
-        gap: 15px;
+        max-width: 900px;
+        position: relative;
+        height: 10px;
+    }
+    #hamburger{display: none;}
+    .nav{
+        top: -125px;
+        left: 180px;
+        display: flex;
+        background-color: inherit;
+        color: #fff;
+        flex-direction: row;
         align-items: center;
-        }
-        nav{
-            align-items: center;
-            color: #fff;
-            display: flex;
-            background-color: inherit;
-        }
-        #hamburger{
-            display: none;
-        }
-        .menu{
-            display: flex;
-            justify-content: flex-start;
-            width: 600px;
-            gap: 45px;
-        }
-        .icon-arrow-light{
-            display: inline;
-        }
-        .icon-arrow-light.active{
-            transform: rotate(180deg);
-        }
-        .icon-arrow-dark{
-            display: none;
-        }
-        .introductory-text{
-            max-width: 950px;
-            margin-top: 30vh;
-        }
-        .icon-arrow{
-            color: #fff;
-        }
-        .link-main{
-            font-size: 32px;
-        } 
-        .menu-dropdown{
-            width: 151px;
-      position: absolute;
-      padding: 16px 36px 16px 24px;
-      background-color: hsl(0, 0%, 100%);
-      text-align: left;
-      top: 40px;
-      left: calc(100% - 125.5px);
-        }
-        .signup{
-            margin-left: 10px;
-        }
+    }
+    .menu{
+        flex-direction: row;
+        width: 850px;
+    }
+    .menu li{
+        width: 90px;
+    }
+    .icon-arrow-dark{
+        display: none;
+    }
+    .icon-arrow-light{
+        display: inline;
+    }
+    .icon-arrow-light.active{
+        transform: rotate(180deg);
+    }
+    .menu-dropdown{
+        position: absolute;
+        top: 100%;
+        left: -40px;
+    }
+    .menu-dropdown.active{
+        display: inline;
+        text-align: left;
+        padding-left: 20px;
+        background-color: #fff;
+        color: var(--very-dark-blue-headings);
+    }
+    .btns-nav{
+        flex-direction: row;
+        border-top: none;
+        gap: 20px;
+        justify-content: flex-end;
+        width: auto;
+        padding-left: 188px;
+    }
+    .login{
+        margin-top: 0;
+        color: #fff;
+    }
+    .signup{
+        background-color: #fff;
+        color: #FF505C;
+    }
+    .introductory-text{
+        max-width: 950px;
+        margin-top: 24vh;
+    }
+    .introductory-text h1{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 36px;
+    }
+    .introductory-text p{
+        padding: 10px 30px 20px;
+    }
 }
+
+

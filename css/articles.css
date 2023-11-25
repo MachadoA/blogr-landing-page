@@ -12,6 +12,8 @@
 .second{
     padding: 40px 10px;
     text-align: center;
+    width: 350px;
+    margin: auto;
 }
 .second h2{
     color: var(--very-dark-blue-headings);
@@ -41,7 +43,14 @@
 .third p{
     color: var(--very-dark-blue-headings);
     font-size: 14px;
-    padding: 20px 0;
+    padding: 20px 34px;
+}
+.third{
+    margin: auto;
+}
+.img-left{
+    margin: auto;
+    width: 350px;
 }
 
 .title-white{
@@ -51,21 +60,25 @@
     background-image: url('../images/bg-pattern-circles.svg');
     background-repeat: no-repeat;
     background-size: 300px auto;
-    background: url('../images/bg-pattern-circles.svg') top/100% 60% no-repeat, linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background: url('../images/bg-pattern-circles.svg') 57% -123%/69% 88% no-repeat, linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
     border-bottom-left-radius: 75px;
     border-top-right-radius: 75px;
 }
 .title-white h2{
     color: var(--white-text);
-    font-size: 22px;
+    font-size: 26px;
     padding: 5px 0;
     font-family: 'Ubuntu', sans-serif;
 }
 .title-white p{
     color: var(--white-text);
     font-size: 14px;
-    padding: 20px 0;
+    padding: 20px 30px;
     font-weight: 300;
+}
+.title-white-article{
+    width: 350px;
+    margin: auto;
 }
 
 footer{
@@ -73,6 +86,9 @@ footer{
     color: var(--footer-text);
     padding: 15px 0;
     text-align: center;
+}
+footer img{
+    padding-top: 70px;
 }
 
 footer a .link-main{color: #fff;}
@@ -111,6 +127,8 @@ footer article a{
     grid-area: two;
 }
 .grid-image{
+    width: 950px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "one two";
@@ -128,23 +146,42 @@ footer article a{
     font-size: 28px;
 }
 .second {
-    padding: 40px 15px
+    padding: 40px 15px;
+    width: 100vw;
 }
 .third{
     text-align: left;
+}
+.third p{
+    padding: 20px 0;
+    line-height: 1.5;
 }
 #p-left{
     padding: 20px 2px
 }
 .title-white{
+    background: url('../images/bg-pattern-circles.svg') -10% 80% / 60% no-repeat, linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    height: 290px;
+    position: relative;
+}
+.title-white h2{
+    padding-left: 28px;
+}
+.title-white-article{
+    line-height: 1.5;
+    margin: auto;
+    width: 950px;
     display: flex;
     align-items: center;
-    padding: 0 21px;
     text-align: left;
-    background: url('../images/bg-pattern-circles.svg') left/50% 50% no-repeat, linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
-    height: 290px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -56px);
 }
 .img-left{
+    margin: auto;
+    width: 950px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "one two";
@@ -154,7 +191,7 @@ footer article a{
 .img-laptop{
     max-width: 800px;
     width: 491px;
-    height: 531px;
+    height: 510px;
 }
 footer{
     display: flex;
